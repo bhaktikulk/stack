@@ -12,7 +12,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post("http://localhost:3001/login", { email, password })
+            .post("https://stack-abc.vercel.app/login", { email, password })
             .then((result) => {
                 if (result.data.message === "Success") {
                     alert("Login successful!"); // Success pop-up
