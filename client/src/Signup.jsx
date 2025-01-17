@@ -32,6 +32,7 @@ function Signup() {
 
         setError(""); // Clear error if validation passes
 
+        axios.defaults.withCredentials=true;
         // Send data to the backend
         axios
             .post("https://stack-abc.vercel.app/", { name, email, dob, password })
