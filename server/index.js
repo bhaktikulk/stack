@@ -4,8 +4,14 @@ const cors=require("cors")
 const EmployeeModel=require('./models/Employee')
 
 const app=express()
+app.use(cors(
+  {
+    origin:["https://stack-client-bay.vercel.app/"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+ ));
 app.use(express.json())
-app.use(cors())
 
 mongoose
   .connect("mongodb+srv://Bhakti12:12345678a@cluster.hozl3.mongodb.net/employee?retryWrites=true&w=majority", {
